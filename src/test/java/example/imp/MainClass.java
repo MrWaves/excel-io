@@ -44,7 +44,6 @@ public class MainClass {
 		// parseSheet
 		List<Member> list = ExcelImportUtils.parseSheet(
 				Member.class, MemberVerifyBuilder.getInstance(), sheet, 1, new ParseSheetCallback<Member>() {
-					@Override
 					public void callback(Member t, int rowNum) throws Exception {
 						t.setDateDesc(sdf.format(t.getDate()));
 					}

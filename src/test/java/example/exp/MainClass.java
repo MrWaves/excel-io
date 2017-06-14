@@ -43,7 +43,7 @@ public class MainClass {
 	 * @throws Exception
 	 */
 	public static void exportBean() throws Exception{
-		List<Member> list = new ArrayList<>();
+		List<Member> list = new ArrayList<Member>();
 		list.add(new Member("张三", 28, 1, "2016-10-19"));
 		list.add(new Member("李四", 25, 2, "2016-10-19"));
 		Workbook bean = ExcelExportUtils.createWorkbook(list, fields);
@@ -55,7 +55,7 @@ public class MainClass {
 	 * @throws Exception
 	 */
 	public static void exportBeanWithNum() throws Exception{
-		List<Member> list = new ArrayList<>();
+		List<Member> list = new ArrayList<Member>();
 		list.add(new Member("张三", 28, 1, "2016-10-19"));
 		list.add(new Member("李四", 25, 2, "2016-10-19"));
 		Workbook bean = ExcelExportUtils.createWorkbook(list, fieldsWithNum, true);
@@ -67,14 +67,14 @@ public class MainClass {
 	 * @throws Exception
 	 */
 	public static void exportMap() throws Exception{
-		List<Map<String, Object>> list = new ArrayList<>();
-		Map<String, Object> map = new HashMap<>();
+		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("name", "张三");
 		map.put("age", 28);
 		map.put("country", 1);
 		map.put("dateDesc", "2016-10-19");
 		list.add(map);
-		map = new HashMap<>();
+		map = new HashMap<String, Object>();
 		map.put("name", "张三");
 		map.put("age", 28);
 		map.put("country", 1);
